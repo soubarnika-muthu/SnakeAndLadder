@@ -1,8 +1,6 @@
 ﻿
 using System;
 
-
-
 namespace SnakeAndLadder
 {
     class Program
@@ -14,6 +12,7 @@ namespace SnakeAndLadder
         /// UC2- Generating Die Roll using Random class
         /// UC3- Checking whether to move forward backward based on player choice
         /// UC4- Checking till reaches 100
+        /// UC5-Checks for Exact Win 
         /// </summary>
         /// <param name="args">The arguments.</param>
 
@@ -22,6 +21,7 @@ namespace SnakeAndLadder
         const int SNAKE = 1;
         const int NO_PLAY = 0;
         const int WIN = 100;
+        const int INITIAL_POS = 0;
 
 
         static void Main(string[] args)
@@ -30,7 +30,7 @@ namespace SnakeAndLadder
 
             //initializing local variable where no. of player is 1 and initial position is 0
            // int player = 1;
-            int playerPos = 0;
+            int playerPos = INITIAL_POS;
             //creating object for Random class
             Random random = new Random();
 
@@ -70,14 +70,25 @@ namespace SnakeAndLadder
             }
 
             //if position reaches below initial pos restart from initial pos
-            if (pos < 0)
+            if (pos < INITIAL_POS)
             {
-                Console.WriteLine("Restarting from initial position");
                 pos = 0;
             }
+
+            pos = ExactWinCheck(pos, die);
+
             return pos;
         }
 
+        //Checks whether the position is within WIN
+        public static int ExactWinCheck(int lastPos, int die)
+        {
+            if (lastPos > WIN)
+            {
+                lastPos -= die;
+            }
+            return lastPos;
+        }
 
     }
 }
