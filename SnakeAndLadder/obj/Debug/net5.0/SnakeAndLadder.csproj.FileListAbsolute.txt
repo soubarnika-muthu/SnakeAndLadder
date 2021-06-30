@@ -1,0 +1,16 @@
+C:\Users\hp\source\repos\SnakeAndLadder\SnakeAndLadder\obj\Debug\net5.0\SnakeAndLadder.csproj.AssemblyReference.cache
+C:\Users\hp\source\repos\SnakeAndLadder\SnakeAndLadder\obj\Debug\net5.0\SnakeAndLadder.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\source\repos\SnakeAndLadder\SnakeAndLadder\obj\Debug\net5.0\SnakeAndLadder.AssemblyInfoInputs.cache
+C:\Users\hp\source\repos\SnakeAndLadder\SnakeAndLadder\obj\Debug\net5.0\SnakeAndLadder.AssemblyInfo.cs
+C:\Users\hp\source\repos\SnakeAndLadder\SnakeAndLadder\obj\Debug\net5.0\SnakeAndLadder.csproj.CoreCompileInputs.cache
+C:\Users\hp\source\repos\SnakeAndLadder\SnakeAndLadder\bin\Debug\net5.0\SnakeAndLadder.exe
+C:\Users\hp\source\repos\SnakeAndLadder\SnakeAndLadder\bin\Debug\net5.0\SnakeAndLadder.deps.json
+C:\Users\hp\source\repos\SnakeAndLadder\SnakeAndLadder\bin\Debug\net5.0\SnakeAndLadder.runtimeconfig.json
+C:\Users\hp\source\repos\SnakeAndLadder\SnakeAndLadder\bin\Debug\net5.0\SnakeAndLadder.runtimeconfig.dev.json
+C:\Users\hp\source\repos\SnakeAndLadder\SnakeAndLadder\bin\Debug\net5.0\SnakeAndLadder.dll
+C:\Users\hp\source\repos\SnakeAndLadder\SnakeAndLadder\bin\Debug\net5.0\ref\SnakeAndLadder.dll
+C:\Users\hp\source\repos\SnakeAndLadder\SnakeAndLadder\bin\Debug\net5.0\SnakeAndLadder.pdb
+C:\Users\hp\source\repos\SnakeAndLadder\SnakeAndLadder\obj\Debug\net5.0\SnakeAndLadder.dll
+C:\Users\hp\source\repos\SnakeAndLadder\SnakeAndLadder\obj\Debug\net5.0\ref\SnakeAndLadder.dll
+C:\Users\hp\source\repos\SnakeAndLadder\SnakeAndLadder\obj\Debug\net5.0\SnakeAndLadder.pdb
+C:\Users\hp\source\repos\SnakeAndLadder\SnakeAndLadder\obj\Debug\net5.0\SnakeAndLadder.genruntimeconfig.cache
