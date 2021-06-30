@@ -1,7 +1,7 @@
 ﻿
-  
-  
 using System;
+
+
 
 namespace SnakeAndLadder
 {
@@ -13,6 +13,7 @@ namespace SnakeAndLadder
         /// UC1-Initialize player and Initial position
         /// UC2- Generating Die Roll using Random class
         /// UC3- Checking whether to move forward backward based on player choice
+        /// UC4- Checking till reaches 100
         /// </summary>
         /// <param name="args">The arguments.</param>
 
@@ -20,52 +21,63 @@ namespace SnakeAndLadder
         const int LADDER = 2;
         const int SNAKE = 1;
         const int NO_PLAY = 0;
-        
+        const int WIN = 100;
 
 
         static void Main(string[] args)
         {
-            //initializing local variable where no. of player is 1 and initial position is 0
-            int player = 1;
-            int playerPos = 0;
+            Console.WriteLine("Welcome to Snake and Ladder World");
 
+            //initializing local variable where no. of player is 1 and initial position is 0
+           // int player = 1;
+            int playerPos = 0;
             //creating object for Random class
             Random random = new Random();
 
-            //Generating DieRoll using Next method
-            int dieRoll = random.Next(1, 7);
-
-            //Generating the player choice
-            int playerChoice = random.Next(0, 3);
-
-
-            Console.WriteLine("Welcome to Snake and Ladder World");
-            Console.WriteLine("Player " + player + " is in position " + playerPos + " initially");
-            PlayerChoice(playerChoice,dieRoll,playerPos);
-            Console.Read();
-
-        }
-            //method check whether snake or ladder
-            public static void PlayerChoice(int choice,int die,int playerPos)
+            //playing till the player reaches Win position
+            while (playerPos < WIN)
             {
-                switch (choice)
-                {
-                    case LADDER:
-                        playerPos+= die;
-                        Console.WriteLine("Ladder moved Forward to the postion "+playerPos);
-                        break;
-                    case SNAKE:
-                        playerPos += die;
-                        Console.WriteLine("Snake moved Backward to the postion " + playerPos);
-                        break;
-                    default:
-                        playerPos = 0;
-                        Console.WriteLine("Don't Move");
-                        break;
-                }
+                //Generating DieRoll using Next method
+                int dieRoll = random.Next(1, 7);
+
+                //Generating the player choice
+                int playerChoice = random.Next(0, 3);
+
+                //current position of player
+                playerPos = PlayerChoice(playerChoice, playerPos, dieRoll);
+                Console.WriteLine("Player Position:" + playerPos);
+
+
             }
 
 
+            Console.Read();
         }
-    }
 
+        //method check whether snake or ladder
+        public static int PlayerChoice(int choice, int pos, int die)
+        {
+            switch (choice)
+            {
+                case LADDER:
+                    pos += die;
+                    break;
+                case SNAKE:
+                    pos -= die;
+                    break;
+                default:
+                    break;
+            }
+
+            //if position reaches below initial pos restart from initial pos
+            if (pos < 0)
+            {
+                Console.WriteLine("Restarting from initial position");
+                pos = 0;
+            }
+            return pos;
+        }
+
+
+    }
+}
